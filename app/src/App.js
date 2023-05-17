@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./components/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import GroupList from "./components/GroupList";
+import GroupEdit from "./components/GroupEdit";
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 					exact={true}
 					element={<GroupList />}
 				></Route>
+				<Route path="/groups/:id" element={<GroupEdit />} />
 			</Routes>
 		</Router>
 	);
